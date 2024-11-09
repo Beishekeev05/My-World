@@ -5,6 +5,7 @@ const BaseLayout = () => {
 		<>
 			<MainBlock>
 				hello
+				main
 			</MainBlock>
 		</>
 	);
