@@ -4,8 +4,11 @@ const BaseLayout = () => {
 	return (
 		<>
 			<MainBlock>
-				hello
-				main
+				<header></header>
+				<main>
+					<aside></aside>
+					<section></section>
+				</main>
 			</MainBlock>
 		</>
 	);
@@ -13,10 +16,17 @@ const BaseLayout = () => {
 
 export default BaseLayout;
 
-const MainBlock = styled(Box)(({}) => ({
+const MainBlock = styled(Box)(({ theme }) => ({
 	width: "100%",
 	maxWidth: "1550px",
 	minWidth: "1200px",
-	height: "100%",
+	height: "100vh",
 	backgroundColor: "bisque",
+	border: "1px solid black",
+
+	[theme.breakpoints.down("sm")]: {
+		width: "100%",
+		backgroundColor: "red",
+		height: "100vh",
+	},
 }));
